@@ -3,11 +3,11 @@ BITS 16
 _start:
   jmp short start
   nop
-  
+
 times 33 db 0   
 
 start:
-  jmp 0x7c0:start
+  jmp 0x7c0:step2
 
 step2:
   cli ; Clear Interrupts
