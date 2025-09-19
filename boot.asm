@@ -10,7 +10,7 @@ start:
   jmp 0x7c0:step2
 
 handle_zero:
-  move ah, 0eh
+  mov ah, 0eh
   mov al, 'A'
   mov bx, 0x00
   int 0x10
@@ -30,7 +30,7 @@ step2:
   mov word[ss:0x02], 0x7c0
 
   int 0
-  
+
   mov si, message
   call print
   jmp $
